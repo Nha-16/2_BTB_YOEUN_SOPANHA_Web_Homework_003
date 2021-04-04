@@ -1,0 +1,318 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+nav{
+    position: sticky;
+    width: 100%;
+    top:0px;
+}
+nav ul {
+    list-style-type: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+nav ul li{
+    display: inline-block;
+}
+nav ul li a{
+    margin-left: -4px;
+    display: block;
+    text-decoration: none;
+    color:rgb(163, 161, 161);
+    padding: 10px 25px;
+    font-size:18px;
+  
+}
+nav ul li a:hover{
+    color: white;
+}
+nav ul li a img:hover{
+    color: white;
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+a{
+    text-decoration: none;
+    
+}
+.title{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 60px;;
+}
+.flex-container {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+  }
+  
+  .flex-item-left {
+    padding: 10px;
+    flex: 50%;
+  }
+  
+  .flex-item-right {
+    padding: 10px;
+    flex: 40%;
+    float:left;
+}
+#img{
+    width:100%;
+}
+#models{
+    font-size: 24px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.box1{
+    width: 60%;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 20px;
+}
+.box1 .img{
+    width:60%;  
+    float: left;
+}
+.box1 .img img{
+    width:80%;
+    float: right;
+    height:300px;
+}
+.box1 .detial{
+    width:40%;
+    margin-top: 25px;
+    float: left;
+}
+.app-layout{
+    width: 80%;
+    
+    margin:auto;
+    overflow: hidden;
+    margin-top:20px;
+}
+.app-layout .box{
+    float: left;
+    width:24%;
+    margin: 0.5%;
+   /*background-color: rgb(255, 255, 255);*/
+}
+.box{
+    width:100%;
+    text-align: center;
+    color:black;
+    float: left;
+}
+.pic img{
+    width:100%;
+    height:300px;
+}
+.dot {
+    height: 15px;
+    width: 15px;
+    background-color: Gray;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .button {
+    background-color: blue;
+    border: none;
+    color: white;
+    padding: 3px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    border-radius:30px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+
+
+nav ul li .logo a img:hover{
+    color: white;
+}
+.hum-button{
+    color: aliceblue;
+    position: absolute;
+    left: 0.6rem;
+    top: 0.7rem;
+    display: none;
+}
+#hum-menu:checked ~ ul li:not(.logo){
+    display: block;
+}
+@media only screen and (min-width: 992px) {
+    
+    #hum-menu:checked ~ ul li:not(.logo){
+        display: inline-block;
+    }
+    nav ul {
+    list-style-type: none;
+    text-align: center;
+    }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+    #hum-menu:checked ~ ul li:not(.logo){
+        display: inline-block;
+    }
+    nav ul {
+    list-style-type: none;
+    text-align: center;
+    }
+    .box1{
+        width:100%;
+        float: left;
+    }
+    .detial{
+        display: inline-block;
+    }
+    
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+    nav ul {
+    list-style-type: none;
+    text-align: right;
+    }
+ 
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 800px) {
+    .hum-button{
+        display: block;
+    }
+    nav ul li{
+        display: block;
+        text-align: center;
+    }
+    #hum-menu:checked ~ ul li:not(.logo){
+        display: block;
+    }
+    nav ul li:not(.logo){
+        display: none;
+    }
+}
+/* Extra large devices (large laptops and desktops, 1115px) */
+@media only screen and (max-width: 1115px) {
+    .hum-button{
+        display: block;
+    }
+    nav ul li{
+        display: block;
+        text-align: center;
+    }
+    #hum-menu:checked ~ ul li:not(.logo){
+        display: block;
+    }
+    nav ul li:not(.logo){
+        display: none;
+    }
+    .box{
+        width:100%;
+        height:100%;
+    }
+    .box1{
+        width:100%;
+        float: left;
+    }
+}
+
+/* @media only screen and (max-width: 1200px) {...} */
+
+  .box11 {
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    text-align: center;
+  }
+  /* Our Grid Code */
+  .app-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /*grid-template-rows: 150vh;*/
+    margin:auto;
+    margin-top: 15px;
+  }
+  
+  /* try to resize the screen */
+  @media screen and (max-width: 1115px) {
+    .app-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    .box11 {
+        color: rgb(0, 0, 0);
+        padding: 0px;
+        text-align: center;
+      }
+      .flex-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+  }
+  @media screen and (max-width: 700px) {
+    .app-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .box11 {
+        color: rgb(0, 0, 0);
+        padding: 20px;
+        text-align: center;
+      }
+
+  }
+  @media screen and (max-width: 900px) {
+    .app-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .box11 {
+        color: rgb(0, 0, 0);
+        padding: 20px;
+        text-align: center;
+      }
+
+  }
+  @media screen and (max-width: 650px) {
+    .app-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    .box11 {
+        color: rgb(0, 0, 0);
+        padding: 20px;
+        text-align: center;
+      }
+      .pic img{
+        width:80%;
+      }
+
+  }
+
+  /*Screen MotoG4*/
+  @media screen and (max-width: 375px) {
+    .app-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    .box11 {
+        color: rgb(0, 0, 0);
+        padding: 20px;
+        text-align: center;
+      }
+      .pic img{
+        width:100%;
+        height: 240px;
+      }
+
+  }
